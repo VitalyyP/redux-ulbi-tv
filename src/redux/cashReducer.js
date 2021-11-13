@@ -7,7 +7,7 @@ export const cashReducer = (state = defaultState, action) => {
     case 'ADD_CASH':
       return { ...state, cash: state.cash + action.payload };
 
-    case 'REMOVE_CUSTOMERS':
+    case 'GET_CASH':
       return { ...state, cash: state.cash - action.payload };
 
     default:
