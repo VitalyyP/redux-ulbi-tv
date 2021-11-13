@@ -37,14 +37,14 @@ function App() {
       </div>
       <div>
         <button onClick={() => addCustomer(prompt())}>Добавить клиента</button>
-        <button onClick={() => removeCustomer()}>Удалить клиента</button>
       </div>
 
       {customers.length > 0 ? (
         <div>
           {customers.map(customer => (
-            <div key={customer.id} onClick={() => removeCustomer(customer)}>
-              {customer.name}
+            <div style={{ display: 'flex' }} key={customer.id}>
+              <div>{customer.name}</div>
+              <button onClick={() => removeCustomer(customer)}>Удалить клиента</button>
             </div>
           ))}
         </div>
