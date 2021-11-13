@@ -1,11 +1,7 @@
-const defaultState = {
-  customers: [],
-};
-
 const ADD_CUSTOMER = 'ADD_CUSTOMER';
 const REMOVE_CUSTOMER = 'REMOVE_CUSTOMER';
 
-export const customerReducer = (state = defaultState, action) => {
+export const customerReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_CUSTOMER:
       return { ...state, customers: [...state.customers, action.payload] };
