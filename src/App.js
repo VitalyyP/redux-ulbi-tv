@@ -6,7 +6,7 @@ import { addCashAction, getCashAction } from './redux/cashReducer';
 function App() {
   const dispatch = useDispatch();
   const cash = useSelector(state => state.cash);
-  const customers = useSelector(state => state.customers.customers);
+  const customers = useSelector(state => state.customers);
 
   const addCash = cash => {
     dispatch(addCashAction(cash));
